@@ -1,4 +1,4 @@
-﻿# M8:[过程匹配](https://github.com/OS-Q/M8) 
+﻿# M8：[数据处理](https://github.com/OS-Q/M8) 
 
 [![sites](OS-Q/OS-Q.png)](http://www.OS-Q.com)
 
@@ -8,13 +8,13 @@
 
 ## [节点描述](https://github.com/OS-Q/M8/wiki) 
 
-M8过程匹配节点，用于分析处理带有时间维度的数据
+M8数据处理节点，用于分析处理业务层数据内容，获得价值信息或结论
 
 ### [共用资源](https://github.com/OS-Q/M8/wiki/src) 
 
-#### 前置准备
+#### 数据协议
 
-
+- Protobuf
 
 
 ---
@@ -23,43 +23,45 @@ M8过程匹配节点，用于分析处理带有时间维度的数据
 
 ## [包含平台](https://github.com/OS-Q/M8/wiki/index) 
 
-#### W31：[语音识别](https://github.com/OS-Q/W31)
+#### W31：[数学运算](https://github.com/OS-Q/W31)
 
+用于数据挖掘，通过相关数据统计和拟合得到相关结论
 
+#### W32：[静态识别](https://github.com/OS-Q/W32)
 
-#### W32：[手势识别](https://github.com/OS-Q/W32)
+用于识别静态对象
 
+#### W33：[动态识别](https://github.com/OS-Q/W33)
 
+用于识别动态对象（有时间维度分析）
 
-#### W33：[行为识别](https://github.com/OS-Q/W33)
+#### W34：[数据关联](https://github.com/OS-Q/W34)
 
+用于将数据进行归类和逻辑关联
 
+#### W35：[知识库](https://github.com/OS-Q/W35)
 
-#### W34：[逻辑分析](https://github.com/OS-Q/W34)
+用于提供知识查询和行为输出
 
+## [同级节点](https://github.com/OS-Q/Q3/wiki/)
 
+#### M7：[系统管理](https://github.com/OS-Q/M7)
 
-#### W35：[增强学习](https://github.com/OS-Q/W35)
-
-
-
-## [同级节点](https://github.com/OS-Q/M7/wiki/index)
-
-#### M7：[模式识别](https://github.com/OS-Q/M7)
-
-模式识别节点，通过既定模式进行判断
+用于管理Q系统各个节点，常态维护和异常处理
  
-#### -> M8：[过程匹配](https://github.com/OS-Q/M8) 
+#### -> M8：[数据处理](https://github.com/OS-Q/M8) 
 
-过程匹配节点，添加顺序特征，具有时间变量
+用于实现特定算法的计算功能
 
-#### M9：[概率分析](https://github.com/OS-Q/M9)
+#### M9：[深度分析](https://github.com/OS-Q/M9)
 
-概率判定节点，没有既定的判断条件和目标，通过概率获得结论
+用于部署相关深度模型扩展边缘计算功能
 
 ---
 
-###  [Q redefined the scope of Operation System](http://www.OS-Q.com)
 ###  qitas@qitas.cn
-###  2018-11-29
+
+###  [Q redefined the scope of Operation System](http://www.OS-Q.com)
+
+####  2018-12-7
 
