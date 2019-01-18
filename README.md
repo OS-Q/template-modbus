@@ -2,7 +2,7 @@
 
 [![sites](OS-Q/OS-Q.png)](http://www.OS-Q.com)
 
-#### 归属设备体系：[Q3](https://github.com/OS-Q/Q3)
+#### 归属边缘计算：[Q3](https://github.com/OS-Q/Q3)
 
 #### 关于系统架构：[OS-Q](https://github.com/OS-Q/OS-Q)
 
@@ -10,7 +10,7 @@
 
 M8数据分析节点，用于分析处理业务层数据内容，获得价值信息或结论
 
-### [共用资源](https://github.com/OS-Q/M8/wiki/src) 
+### [共用资源](OS-Q/)
 
 
 ---
@@ -19,34 +19,33 @@ M8数据分析节点，用于分析处理业务层数据内容，获得价值信
 
 - naming patterns：system Q[1,4] -> node M[1,12] -> platform W[1,52] -> device D[1,365]
 
-## [包含平台](https://github.com/OS-Q/M8/wiki/index) 
+## [包含平台](https://github.com/OS-Q/M8/wiki) 
 
-#### W31：[数学运算](https://github.com/OS-Q/W31)
+#### W31：[模式识别](https://github.com/OS-Q/W31)
 
-用于数据挖掘，通过相关数据统计和拟合得到相关结论
+通过特定的模式和逻辑规则实现信息提取
 
-#### W32：[静态识别](https://github.com/OS-Q/W32)
+#### W32：[数据分类](https://github.com/OS-Q/W32)
 
-用于识别静态对象
+classification分类问题是用于将事物打上一个标签，通常结果为离散值，分类和回归的区别在于输出变量的类型。
 
-#### W33：[动态识别](https://github.com/OS-Q/W33)
+#### W33：[回归分析](https://github.com/OS-Q/W33)
 
-用于识别动态对象（有时间维度分析）
+regression回归问题通常是用来预测一个值，分类和回归均是监督学习问题，区别在于学习函数的预测输出是类别还是值。
 
-#### W34：[数据关联](https://github.com/OS-Q/W34)
+#### W34：[聚类处理](https://github.com/OS-Q/W34)
 
-用于将数据进行归类和逻辑关联
+clustering聚类也是分析样本的属性, 有点类似classification, 不同的就是classification 在预测之前是知道  的范围, 或者说知道到底有几个类别, 而聚类是不知道属性的范围的。
 
-#### W35：[知识库](https://github.com/OS-Q/W35)
+#### W35：[降维分析](https://github.com/OS-Q/W35)
 
-用于提供知识查询和行为输出
+dimensionality reduction 降维是机器学习一个重要的领域, 降维有很多重要的应用, 特征的维数过高, 会增加训练的负担与存储空间, 降维就是希望去除特征的冗余, 用更加少的维数来表示特征
 
 ## [同级节点](https://github.com/OS-Q/Q3/wiki/)
 
+#### M7：[边缘管控](https://github.com/OS-Q/M7)
 
-#### M7：[边缘管理](https://github.com/OS-Q/M7)
-
-用于管理边缘节点，常态管理和异常处理
+用于管控下辖边缘节点的各种状态和数据
  
 #### [M8：数据分析](https://github.com/OS-Q/M8) 
 
@@ -59,7 +58,7 @@ M8数据分析节点，用于分析处理业务层数据内容，获得价值信
 
 ---
 
+
 ####  © qitas@qitas.cn
 ###  [OS-Q redefined Operation System](http://www.OS-Q.com)
-####  @ 2018-12-31
-
+####  @ 2019-1-18
