@@ -8,6 +8,8 @@
 
 [P215](https://github.com/OS-Q/P215) 用于 [STM32G0](https://www.st.com/zh/microcontrollers-microprocessors/stm32g0-series.html) 系列开发
 
+关键特性：裸驱开发/高主频/性价比/稳定可靠/资源丰富
+
 | 目标平台 | arduino | cmsis | libopencm3 | stm32hal |
 | ------- | ------- | ------ | --------- | --------- |
 | [STM32G031J6](https://github.com/SoCXin/STM32G474RE) | √ | √ | √ | √ |
