@@ -1,16 +1,16 @@
-﻿# [Toolchain S16](https://github.com/OS-Q/S16)
-[![sites](OS-Q/OS-Q.png)](http://www.OS-Q.com)
-#### 关于系统架构：[OS-Q](https://github.com/OS-Q/OS-Q)
+﻿# [P216](https://github.com/OS-Q/P216)
 
-[EDGE-Q](https://github.com/OS-Q/EDGE-Q) -> Q[4] -> M[12] -> W[52] -> D[365] -> H[24] -> N[60] -> S[60]
+[![sites](http://182.61.61.133/link/resources/OSQ.png)](http://www.OS-Q.com)
 
-### [Toolchain描述](https://github.com/OS-Q/S16/wiki) 
+[![Build Status](https://github.com/OS-Q/P216/workflows/CI/badge.svg)](https://github.com/OS-Q/P216/actions/workflows/CI.yml)
 
-[Toolchain S16](https://github.com/OS-Q/S16) 用于支持nrf52烧录
+### [简介](https://github.com/OS-Q/P216/wiki)
 
-### [关联资源](https://github.com/OS-Q/)
+[P216](https://github.com/OS-Q/P216) 用于 [STM32G0](https://www.st.com/zh/microcontrollers-microprocessors/stm32g0-series.html) 系列开发
 
-*  [ Platform : H1](https://github.com/OS-Q/H1) 
+| 目标平台 | arduino | cmsis | libopencm3 | stm32 hal |
+| ------- | ------- | ------ | --------- | --------- |
+| [STM32G031J6](https://github.com/SoCXin/STM32G474RE) | √ | √ | √ | √ |
+| [STM32G031K8](https://github.com/SoCXin/STM32G474RE) | √ | √ |   | √ |
 
-### [OS-Q = Open Solutions | Open Source |  Operating System ](http://www.OS-Q.com/S16)
-####  2019-9-11
+#### [源圈OS-Q](http://www.OS-Q.com)
