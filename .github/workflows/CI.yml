@@ -16,7 +16,7 @@ jobs:
           # - "examples/cmsis-blink"
           - "examples/libopencm3-blink"
           # - "examples/mbed-rtos-blink-baremetal"
-          # - "examples/stm32cube-hal-blink"
+          - "examples/stm32cube-hal-blink"
           # - "examples/stm32cube-hal-eeprom-emulation"
 
     runs-on: ${{ matrix.os }}
