@@ -1,7 +1,7 @@
 {
   "name": "P215",
   "title": "OS-Q STM32G0 Family",
-  "description": "The STM32 family of 32-bit Flash MCUs based on the ARM Cortex-M processor is designed to offer new degrees of freedom to MCU users. It offers a 32-bit product range that combines very high performance, real-time capabilities, digital signal processing, and low-power, low-voltage operation, while maintaining full integration and ease of development.",
+  "description": "STM32 Cortex-M0家族新一代高性价比产品.",
   "homepage": "http://www.st.com/web/en/catalog/mmc/FM141/SC1169?sc=stm32",
   "license": "Apache-2.0",
   "keywords": [
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/platformio/platform-ststm32.git"
+    "url": "https://github.com/OS-Q/P215.git"
   },
   "version": "14.1.0",
   "frameworks": {

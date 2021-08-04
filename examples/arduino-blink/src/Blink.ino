@@ -1,13 +1,8 @@
-/*
- * Blink
- * Turns on an LED on for one second,
- * then off for one second, repeatedly.
- */
 
 #include <Arduino.h>
 
 #ifndef LED_BUILTIN
-  #define LED_BUILTIN PC13
+#define LED_BUILTIN PC13
 #endif
 
 void setup()

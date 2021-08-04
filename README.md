@@ -12,7 +12,7 @@
 
 | 目标平台 | arduino | cmsis | libopencm3 | stm32hal |
 | ------- | ------- | ------ | --------- | --------- |
-| [STM32G031J6](https://github.com/SoCXin/STM32G474RE) | √ | √ | √ | √ |
-| [STM32G031K8](https://github.com/SoCXin/STM32G474RE) | √ | √ |   | √ |
+| [STM32G031J6](https://github.com/SoCXin/STM32G031) | √ | √ | √ | √ |
+| [STM32G031K8](https://github.com/SoCXin/STM32G031) | √ | √ |   | √ |
 
 #### [源圈OS-Q](http://www.OS-Q.com)
