@@ -1,7 +1,7 @@
 {
   "name": "P215",
   "title": "OS-Q STM32G0 Family",
-  "description": "STM32 Cortex-M0家族新一代高性价比产品.",
+  "description": "The STM32 family of 32-bit Flash MCUs based on the ARM Cortex-M.",
   "homepage": "http://www.st.com/web/en/catalog/mmc/FM141/SC1169?sc=stm32",
   "license": "Apache-2.0",
   "keywords": [
