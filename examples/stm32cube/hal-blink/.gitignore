@@ -4,3 +4,6 @@ Drivers
 *.launch
 Debug
 .settings
+.mxproject
+.cproject
+*.s
