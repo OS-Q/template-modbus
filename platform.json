@@ -1,6 +1,6 @@
 {
   "name": "P215",
-  "title": "OS-Q STM32G0 Family",
+  "title": "ST STM32G0 Family (OS-Q)",
   "description": "The STM32 family of 32-bit Flash MCUs based on the ARM Cortex-M.",
   "homepage": "http://www.st.com/web/en/catalog/mmc/FM141/SC1169?sc=stm32",
   "license": "Apache-2.0",
@@ -52,11 +52,10 @@
     "toolchain-gccarmnoneeabi": {
       "type": "toolchain",
       "owner": "platformio",
-      "version": ">=1.60301.0,<1.80000.0",
+      "version": "~1.90201.0",
       "optionalVersions": [
         "~1.60301.0",
-        "~1.80201.0",
-        "~1.90201.0"
+        "~1.80201.0"
       ]
     },
     "framework-cmsis": {
@@ -115,11 +114,6 @@
       "optional": true,
       "owner": "platformio",
       "version": "~1.9.190708"
-    },
-    "tool-cmake": {
-      "optional": true,
-      "owner": "platformio",
-      "version": "~3.16.0"
     },
     "tool-ldscripts-ststm32": {
       "optional": true,

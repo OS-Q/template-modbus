@@ -18,12 +18,12 @@ void ms_delay(int ms)
 //Alternates blue and green LEDs quickly
 int main(void)
 {
-    ENABLE_GPIO_CLOCK;              // enable the clock to GPIO
-    LEDPORT->_MODER |= GPIOMODER;   // set pins to be general purpose output
-    for (;;) {
-    ms_delay(500);
-    LEDPORT->ODR ^= (1<<LED1);  // toggle diodes
-    }
+   ENABLE_GPIO_CLOCK;              // enable the clock to GPIO
+   LEDPORT->_MODER |= GPIOMODER;   // set pins to be general purpose output
+   for (;;) {
+   ms_delay(500);
+   LEDPORT->ODR ^= (1<<LED1);  // toggle diodes
+   }
 
-    return 0;
+   return 0;
 }
