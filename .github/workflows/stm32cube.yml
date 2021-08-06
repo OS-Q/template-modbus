@@ -39,4 +39,4 @@ jobs:
       - name: build stm32cube
         working-directory: examples/stm32cube
         run: |
-          platformio run -d ${{ matrix.example }}
+          platformio run -d ${{ matrix.example }}/Core
