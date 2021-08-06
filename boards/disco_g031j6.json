@@ -22,10 +22,10 @@
     "libopencm3",
     "stm32cube"
   ],
-  "name": "ST STM32G0316-DISCO",
+  "name": "STM32G031J6",
   "upload": {
     "maximum_ram_size": 8192,
-    "maximum_size": 131072,
+    "maximum_size": 32768,
     "protocol": "mbed",
     "protocols": [
       "blackmagic",
