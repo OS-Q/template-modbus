@@ -1,6 +1,12 @@
 name: cmsis
 
-on: [push, pull_request]
+on:
+  push:
+    paths:
+      - 'platform.*'
+      - 'builder/**'
+      - 'examples/cmsis/**'
+      - 'cmsis.yml'
 
 jobs:
   build:

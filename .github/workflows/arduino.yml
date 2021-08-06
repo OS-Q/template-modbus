@@ -1,6 +1,13 @@
 name: arduino
 
-on: [push, pull_request]
+on:
+  push:
+    paths:
+      - 'platform.*'
+      - 'builder/**'
+      - 'examples/arduino/**'
+      - 'arduino.yml'
+
 
 jobs:
   build:

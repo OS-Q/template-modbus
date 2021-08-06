@@ -1,6 +1,12 @@
 name: stm32cube
 
-on: [push, pull_request]
+on:
+  push:
+    paths:
+      - 'platform.*'
+      - 'builder/**'
+      - 'examples/stm32cube/**'
+      - 'stm32cube.yml'
 
 jobs:
   build:
@@ -10,7 +16,7 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
         python-version: [3.9]
         example:
-          - "hal-blink""
+          - "hal-blink"
 
     runs-on: ${{ matrix.os }}
 
