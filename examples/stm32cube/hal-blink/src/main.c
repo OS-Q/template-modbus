@@ -19,7 +19,7 @@ int main(void)
   while (1)
   {
     HAL_GPIO_TogglePin(LED_GPIO_PORT, LED_PIN);
-    HAL_Delay(1000);
+    HAL_Delay(500);
   }
 }
 
