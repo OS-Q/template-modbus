@@ -6,7 +6,7 @@ on:
       - 'platform.*'
       - 'builder/**'
       - 'examples/arduino/**'
-      - 'arduino.yml'
+      - '**/arduino.yml'
 
 
 jobs:
@@ -14,10 +14,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        python-version: [3.9]
         example:
           - "blink"
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: [3.9]
 
     runs-on: ${{ matrix.os }}
 
@@ -36,7 +36,7 @@ jobs:
           pip install -U https://github.com/platformio/platformio/archive/develop.zip
           platformio platform install file://.
 
-      - name: Build arduino
+      - name: build arduino
         working-directory: examples/arduino
         run: |
           platformio run -d ${{ matrix.example }}

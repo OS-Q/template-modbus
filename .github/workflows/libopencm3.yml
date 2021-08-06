@@ -6,17 +6,17 @@ on:
       - 'platform.*'
       - 'builder/**'
       - 'examples/libopencm3/**'
-      - 'libopencm3.yml'
+      - '**/libopencm3.yml'
 
 jobs:
   build:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        python-version: [3.9]
         example:
           - "blink"
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: [3.9]
 
     runs-on: ${{ matrix.os }}
 
@@ -35,7 +35,7 @@ jobs:
           pip install -U https://github.com/platformio/platformio/archive/develop.zip
           platformio platform install file://.
 
-      - name: Build libopencm3
+      - name: build libopencm3
         working-directory: examples/libopencm3
         run: |
           platformio run -d ${{ matrix.example }}

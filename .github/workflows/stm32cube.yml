@@ -6,17 +6,17 @@ on:
       - 'platform.*'
       - 'builder/**'
       - 'examples/stm32cube/**'
-      - 'stm32cube.yml'
+      - '**/stm32cube.yml'
 
 jobs:
   build:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        python-version: [3.9]
         example:
           - "hal-blink"
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: [3.9]
 
     runs-on: ${{ matrix.os }}
 
@@ -35,7 +35,7 @@ jobs:
           pip install -U https://github.com/platformio/platformio/archive/develop.zip
           platformio platform install file://.
 
-      - name: Build stm32cube
+      - name: build stm32cube
         working-directory: examples/stm32cube
         run: |
           platformio run -d ${{ matrix.example }}
