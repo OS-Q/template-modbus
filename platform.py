@@ -18,25 +18,9 @@ class P215Platform(PlatformBase):
 
         frameworks = variables.get("pioframework", [])
         if "arduino" in frameworks:
-            if board.startswith("portenta"):
-                self.frameworks["arduino"]["package"] = "framework-arduino-mbed"
-                self.frameworks["arduino"][
-                    "script"
-                ] = "builder/frameworks/arduino/mbed-core/arduino-core-mbed.py"
-                self.packages["framework-arduinoststm32"]["optional"] = True
-            else:
-                self.packages["toolchain-gccarmnoneeabi"]["version"] = "~1.90201.0"
-                self.packages["framework-cmsis"]["version"] = "~2.50700.0"
-                self.packages["framework-cmsis"]["optional"] = False
-
-        if "mbed" in frameworks:
-            deprecated_boards_file = os.path.join(
-                self.get_dir(), "misc", "mbed_deprecated_boards.json")
-            if os.path.isfile(deprecated_boards_file):
-                with open(deprecated_boards_file) as fp:
-                    if board in json.load(fp):
-                        self.packages["framework-mbed"]["version"] = "~6.51506.0"
             self.packages["toolchain-gccarmnoneeabi"]["version"] = "~1.90201.0"
+            self.packages["framework-cmsis"]["version"] = "~2.50700.0"
+            self.packages["framework-cmsis"]["optional"] = False
 
         if "cmsis" in frameworks:
             assert build_mcu, ("Missing MCU field for %s" % board)
@@ -55,13 +39,6 @@ class P215Platform(PlatformBase):
         default_protocol = board_config.get("upload.protocol") or ""
         if variables.get("upload_protocol", default_protocol) == "dfu":
             self.packages["tool-dfuutil"]["optional"] = False
-
-        if board == "mxchip_az3166":
-            self.frameworks["arduino"][
-                "package"] = "framework-arduinostm32mxchip"
-            self.frameworks["arduino"][
-                "script"] = "builder/frameworks/arduino/mxchip.py"
-            self.packages["toolchain-gccarmnoneeabi"]["version"] = "~1.60301.0"
 
         # configure J-LINK tool
         jlink_conds = [
