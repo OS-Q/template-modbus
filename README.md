@@ -6,16 +6,11 @@
 
 [P215](https://github.com/OS-Q/P215) 用于增强 [STM32G0](https://www.st.com/zh/microcontrollers-microprocessors/stm32g0-series.html) 系列的开发，适配验证更多资源，优化编译以释放更多资源
 
-| upload protocols | cmsis-dap | jlink | stlink | blackmagic | mbed | serial |  dfu |
-| ------- | ------- | ------ | ------- | ----- | ---- | ----- | ---- |
-| STM32G031J6 |  √  |  √  |  √  |  √  |  √  |  √  |  √  |  √  |
-| STM32G031K8 |  √  |  √  |  √  |  √  |  √  |  √  |  √  |  √  |
 
-| 板级平台适配 | [![Build Status](https://github.com/OS-Q/P215/workflows/arduino/badge.svg)](https://github.com/OS-Q/P215/actions/workflows/arduino.yml) | [![Build Status](https://github.com/OS-Q/P215/workflows/cmsis/badge.svg)](https://github.com/OS-Q/P215/actions/workflows/cmsis.yml) | [![Build Status](https://github.com/OS-Q/P215/workflows/libopencm3/badge.svg)](https://github.com/OS-Q/P215/actions/workflows/libopencm3.yml) | [![Build Status](https://github.com/OS-Q/P215/workflows/stm32cube/badge.svg)](https://github.com/OS-Q/P215/actions/workflows/stm32cube.yml) |
+| 硬件平台支持 | [![Build Status](https://github.com/OS-Q/P215/workflows/arduino/badge.svg)](https://github.com/OS-Q/P215/actions/workflows/arduino.yml) | [![Build Status](https://github.com/OS-Q/P215/workflows/cmsis/badge.svg)](https://github.com/OS-Q/P215/actions/workflows/cmsis.yml) | [![Build Status](https://github.com/OS-Q/P215/workflows/libopencm3/badge.svg)](https://github.com/OS-Q/P215/actions/workflows/libopencm3.yml) | [![Build Status](https://github.com/OS-Q/P215/workflows/stm32cube/badge.svg)](https://github.com/OS-Q/P215/actions/workflows/stm32cube.yml) |
 | ------- | ------- | ------ | --------- | --------- |
 | [STM32G031J6](https://docs.soc.xin/STM32G031) |  √  |  √  |  √  |  √  |
 | [STM32G031K8](https://docs.soc.xin/STM32G031) |  √  |  √  |  X  |  √  |
-
-
+| [STM32G071R8](https://docs.soc.xin/STM32G071) |  √  |  √  |  √  |  √  |
 
 #### [源圈OS-Q](http://www.OS-Q.com)
