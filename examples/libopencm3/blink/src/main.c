@@ -3,9 +3,9 @@
 #include <libopencm3/stm32/gpio.h>
 
 
-#define RCCLEDPORT (RCC_GPIOD)
-#define LEDPORT (GPIOD)
-#define LEDPIN (GPIO12)
+#define RCCLEDPORT (RCC_GPIOB)
+#define LEDPORT (GPIOB)
+#define LEDPIN (GPIO7)
 
 static void gpio_setup(void)
 {
@@ -14,11 +14,8 @@ static void gpio_setup(void)
 	rcc_periph_clock_enable(RCCLEDPORT);
 	/* Set pin to 'output push-pull'. */
 	/* Using API functions: */
-#ifdef STM32F1
-    gpio_set_mode(LEDPORT, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, LEDPIN);
-#else
 	gpio_mode_setup(LEDPORT, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, LEDPIN);
-#endif
+
 }
 
 int main(void)
@@ -33,6 +30,5 @@ int main(void)
 			__asm__("nop");
 		}
 	}
-
 	return 0;
 }

@@ -1,15 +1,16 @@
 #include "stm32g0xx.h"
-#define LEDPORT (GPIOA)
-#define LED1 (5)
-#define ENABLE_GPIO_CLOCK (RCC->IOPENR |= RCC_IOPENR_GPIOAEN)
-#define _MODER    MODER
-#define GPIOMODER (GPIO_MODER_MODE5_0)
+
+#define LEDPORT      (GPIOB)
+#define LED1         (7)
+#define ENABLE_GPIO_CLOCK  (RCC->IOPENR |= RCC_IOPENR_GPIOBEN)
+#define _MODER       MODER
+#define GPIOMODER    (GPIO_MODER_MODE7_0)
 
 
 void ms_delay(int ms)
 {
    while (ms-- > 0) {
-      volatile int x=500;
+      volatile int x=5000;
       while (x-- > 0)
          __asm("nop");
    }
