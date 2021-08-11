@@ -1,9 +1,9 @@
 
 #include <Arduino.h>
 
-#ifndef LED_BUILTIN
-#define LED_BUILTIN PC13
-#endif
+// #ifndef LED_BUILTIN
+#define LED_BUILTIN PB7
+// #endif
 
 void setup()
 {
