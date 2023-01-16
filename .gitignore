@@ -11,5 +11,4 @@ examples/**/*.md
 LICENSE*
 *.png
 *.jpg
-*.rst
 # *.md

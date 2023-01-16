@@ -1,16 +1,8 @@
-﻿# [P215](https://github.com/OS-Q/P215)
+﻿# [template-modbus](https://github.com/OS-Q/template-modbus)
 
-[![sites](http://182.61.61.133/link/resources/OSQ.png)](http://www.OS-Q.com)
+[template-modbus](https://github.com/OS-Q/template-modbus) 以量产为主的标准模板，基于modbus RTU协议的4线控制器模型。
 
-### [简介](https://github.com/OS-Q/P215/wiki)
-
-[P215](https://github.com/OS-Q/P215) 用于增强 [STM32G0](https://www.st.com/zh/microcontrollers-microprocessors/stm32g0-series.html) 系列的开发，适配验证更多资源，优化编译以释放更多资源
-
-
-| 硬件平台支持 | [![Build Status](https://github.com/OS-Q/P215/workflows/arduino/badge.svg)](https://github.com/OS-Q/P215/actions/workflows/arduino.yml) | [![Build Status](https://github.com/OS-Q/P215/workflows/cmsis/badge.svg)](https://github.com/OS-Q/P215/actions/workflows/cmsis.yml) | [![Build Status](https://github.com/OS-Q/P215/workflows/libopencm3/badge.svg)](https://github.com/OS-Q/P215/actions/workflows/libopencm3.yml) | [![Build Status](https://github.com/OS-Q/P215/workflows/stm32cube/badge.svg)](https://github.com/OS-Q/P215/actions/workflows/stm32cube.yml) |
+| 硬件适配 | [![Build Status](https://github.com/OS-Q/template-modbus/workflows/arduino/badge.svg)](https://github.com/OS-Q/template-modbus/actions/workflows/arduino.yml) | [![Build Status](https://github.com/OS-Q/template-modbus/workflows/cmsis/badge.svg)](https://github.com/OS-Q/template-modbus/actions/workflows/cmsis.yml) | [![Build Status](https://github.com/OS-Q/template-modbus/workflows/libopencm3/badge.svg)](https://github.com/OS-Q/template-modbus/actions/workflows/libopencm3.yml) | [![Build Status](https://github.com/OS-Q/template-modbus/workflows/stm32cube/badge.svg)](https://github.com/OS-Q/template-modbus/actions/workflows/stm32cube.yml) |
 | ------- | ------- | ------ | --------- | --------- |
-| [STM32G031J6](https://docs.soc.xin/STM32G031) |  √  |  √  |  √  |  √  |
-| [STM32G031K8](https://docs.soc.xin/STM32G031) |  √  |  √  |  X  |  √  |
-| [STM32G071R8](https://docs.soc.xin/STM32G071) |  √  |  √  |  √  |  √  |
+| [STM32G031J6](https://doc.soc.xin/STM32G031) |  √  |  √  |  √  |  √  |
 
-#### [源圈OS-Q](http://www.OS-Q.com)

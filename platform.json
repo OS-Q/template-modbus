@@ -1,13 +1,13 @@
 {
-  "name": "P215",
-  "title": "ST STM32G0 Family (OS-Q)",
+  "name": "template-modbus",
+  "title": "ST STM32G0 (QIO)",
   "description": "The STM32 family of 32-bit Flash MCUs based on the ARM Cortex-M.",
   "homepage": "http://www.st.com/web/en/catalog/mmc/FM141/SC1169?sc=stm32",
   "license": "Apache-2.0",
   "keywords": [
-    "dev-platform",
-    "ARM",
-    "Cortex-M",
+    "template",
+    "modbus",
+    "RTU",
     "STMicroelectronics",
     "STM32"
   ],
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/OS-Q/P215.git"
+    "url": "https://github.com/OS-Q/template-modbus.git"
   },
   "version": "14.1.0",
   "frameworks": {
