@@ -1,9 +1,0 @@
-.pio
-MDK-ARM
-Drivers
-*.launch
-Debug
-.settings
-.mxproject
-.cproject
-*.s
