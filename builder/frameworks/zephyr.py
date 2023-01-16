@@ -1,4 +1,4 @@
-# Copyright 2014-present PlatformIO <contact@platformio.org>
+# Copyright 2019-present PlatformIO <contact@platformio.org>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,28 +11,20 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+"""
+The Zephyr Project is a scalable real-time operating system (RTOS) supporting multiple
+hardware architectures, optimized for resource constrained devices, and built with
+safety and security in mind.
 
-from SCons.Script import AlwaysBuild, Import
+https://github.com/zephyrproject-rtos/zephyr
+"""
 
+from os.path import join
+
+from SCons.Script import Import, SConscript
 
 Import("env")
 
-
-# Added in PIO Core 4.4.0
-if not hasattr(env, "AddPlatformTarget"):
-
-    def AddPlatformTarget(
-        env,
-        name,
-        dependencies,
-        actions,
-        title=None,
-        description=None,
-        always_build=True,
-    ):
-        target = env.Alias(name, dependencies, actions)
-        if always_build:
-            AlwaysBuild(target)
-        return target
-
-    env.AddMethod(AddPlatformTarget)
+SConscript(
+    join(env.PioPlatform().get_package_dir("framework-zephyr"), "scripts",
+         "platformio", "platformio-build.py"), exports="env") 

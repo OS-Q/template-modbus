@@ -1,11 +1,11 @@
-import copy
 import json
 import os
-
-from platform import system
+import sys
 
 from platformio.managers.platform import PlatformBase
-from platformio.util import get_systype
+
+
+IS_WINDOWS = sys.platform.startswith("win")
 
 class TemplatemodbusPlatform(PlatformBase):
 
@@ -18,9 +18,9 @@ class TemplatemodbusPlatform(PlatformBase):
 
         frameworks = variables.get("pioframework", [])
         if "arduino" in frameworks:
-            self.packages["toolchain-gccarmnoneeabi"]["version"] = "~1.90201.0"
-            self.packages["framework-cmsis"]["version"] = "~2.50700.0"
-            self.packages["framework-cmsis"]["optional"] = False
+                self.packages["toolchain-gccarmnoneeabi"]["version"] = "~1.90201.0"
+                self.packages["framework-cmsis"]["version"] = "~2.50700.0"
+                self.packages["framework-cmsis"]["optional"] = False
 
         if "cmsis" in frameworks:
             assert build_mcu, ("Missing MCU field for %s" % board)
@@ -39,6 +39,14 @@ class TemplatemodbusPlatform(PlatformBase):
         default_protocol = board_config.get("upload.protocol") or ""
         if variables.get("upload_protocol", default_protocol) == "dfu":
             self.packages["tool-dfuutil"]["optional"] = False
+
+        if "zephyr" in variables.get("pioframework", []):
+            for p in self.packages:
+                if p in ("tool-cmake", "tool-dtc", "tool-ninja"):
+                    self.packages[p]["optional"] = False
+            self.packages["toolchain-gccarmnoneeabi"]["version"] = "~1.80201.0"
+            if not IS_WINDOWS:
+                self.packages["tool-gperf"]["optional"] = False
 
         # configure J-LINK tool
         jlink_conds = [
@@ -98,8 +106,8 @@ class TemplatemodbusPlatform(PlatformBase):
                             "-port", "2331"
                         ],
                         "executable": ("JLinkGDBServerCL.exe"
-                                        if system() == "Windows" else
-                                        "JLinkGDBServer")
+                                       if IS_WINDOWS else
+                                       "JLinkGDBServer")
                     }
                 }
             else:
@@ -132,19 +140,14 @@ class TemplatemodbusPlatform(PlatformBase):
         board.manifest["debug"] = debug
         return board
 
-    def configure_debug_options(self, initial_debug_options, ide_data):
-        debug_options = copy.deepcopy(initial_debug_options)
-        adapter_speed = initial_debug_options.get("speed")
-        if adapter_speed:
-            server_options = debug_options.get("server") or {}
-            server_executable = server_options.get("executable", "").lower()
+    def configure_debug_session(self, debug_config):
+        if debug_config.speed:
+            server_executable = (debug_config.server or {}).get("executable", "").lower()
             if "openocd" in server_executable:
-                debug_options["server"]["arguments"].extend(
-                    ["-c", "adapter speed %s" % adapter_speed]
+                debug_config.server["arguments"].extend(
+                    ["-c", "adapter speed %s" % debug_config.speed]
                 )
             elif "jlink" in server_executable:
-                debug_options["server"]["arguments"].extend(
-                    ["-speed", adapter_speed]
+                debug_config.server["arguments"].extend(
+                    ["-speed", debug_config.speed]
                 )
-
-        return debug_options
