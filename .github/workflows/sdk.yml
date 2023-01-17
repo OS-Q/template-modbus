@@ -19,7 +19,7 @@ jobs:
           - "hal-blink"
           - "ll-blink"
         os: [ubuntu-latest, windows-latest, macos-latest]
-        python-version: [3.7,3.11]
+        python-version: [3.9]
 
     runs-on: ${{ matrix.os }}
 

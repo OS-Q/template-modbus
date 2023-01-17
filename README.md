@@ -14,12 +14,11 @@
 
 
 
-## 适配信息
+## 适配硬件
 
-满足模型的基本功能IO需要至少4个，在模型基础上构建，适配的MCU封装范围可选SON8到TSSOP20等一些列低成本  [L1R1控制器](https://doc.soc.xin/list/low)
+| chips | [![Build Status](https://github.com/OS-Q/template-modbus/workflows/sdk/badge.svg)](https://github.com/OS-Q/template-modbus/actions/workflows/sdk.yml) | [![Build Status](https://github.com/OS-Q/template-modbus/workflows/arduino/badge.svg)](https://github.com/OS-Q/template-modbus/actions/workflows/arduino.yml) | [![Build Status](https://github.com/OS-Q/template-modbus/workflows/cmsis/badge.svg)](https://github.com/OS-Q/template-modbus/actions/workflows/cmsis.yml) | [![Build Status](https://github.com/OS-Q/template-modbus/workflows/cmsis/badge.svg)](https://github.com/OS-Q/template-modbus/actions/workflows/cmsis.yml) | [![Build Status](https://github.com/OS-Q/template-modbus/workflows/libopencm3/badge.svg)](https://github.com/OS-Q/template-modbus/actions/workflows/libopencm3.yml) |
+| ------- | ------- | ------ | --------- | --------- | --------- |
+| [STM32G031](https://doc.soc.xin/STM32G031) |  √  |  √  |  √  |  √  |  √  |
+| [MM32F031](https://doc.soc.xin/mindmotion/MM32F031) |    |    |    |     |
 
-| [chips](https://github.com/OS-Q/chips) | [templates](https://github.com/OS-Q/qio) | [applications](https://github.com/OS-Q/applications) | [libraries](https://github.com/OS-Q/libraries) | [boards](https://github.com/OS-Q/boards) |
-| ------- | ------- | ------ | --------- | --------- |
-| [STM32G031](https://doc.soc.xin/STM32G031) |  √  |  √  |  √  |  √  |
-| [MM32F031](https://doc.soc.xin/mindmotion/MM32F031) |  √  |  √  |  √  |  √  |
 
